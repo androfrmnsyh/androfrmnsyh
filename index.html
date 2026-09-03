@@ -13,14 +13,9 @@
             theme: {
                 extend: {
                     colors: {
-                        dark: '#05050f',
-                        darker: '#020208',
-                        vip: '#ffd700',
-                        diamond: '#00d4ff',
-                        gold: '#fbbf24',
-                        stone: '#94a3b8',
-                        accent: '#8b5cf6',
-                        glow: '#6366f1'
+                        dark: '#05050f', darker: '#020208', vip: '#ffd700',
+                        diamond: '#00d4ff', gold: '#fbbf24', stone: '#94a3b8',
+                        accent: '#8b5cf6', glow: '#6366f1'
                     },
                     fontFamily: { sans: ['Poppins', 'sans-serif'] },
                     animation: {
@@ -41,9 +36,7 @@
     </script>
     <style type="text/tailwindcss">
         @layer utilities {
-            .bg-minecraft {
-                background: linear-gradient(135deg, rgba(5,5,15,.96), rgba(2,2,8,.98)), url('https://images.unsplash.com/photo-1618336753974-aae8e04506aa?w=1920&q=80') center/cover fixed;
-            }
+            .bg-minecraft { background: linear-gradient(135deg, rgba(5,5,15,.96), rgba(2,2,8,.98)), url('https://images.unsplash.com/photo-1618336753974-aae8e04506aa?w=1920&q=80') center/cover fixed; }
             .card-rank { background: linear-gradient(145deg, rgba(15,15,35,.95), rgba(8,8,20,.98)); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,.08); }
             .card-vip { background: linear-gradient(145deg, rgba(45,35,0,.95), rgba(20,15,0,.98)); border: 1px solid rgba(255,215,0,.35); }
             .card-diamond { background: linear-gradient(145deg, rgba(0,30,40,.95), rgba(0,15,25,.98)); border: 1px solid rgba(0,212,255,.35); }
@@ -60,12 +53,8 @@
     <header class="py-4 px-4 sticky top-0 z-50 bg-black/70 backdrop-blur-xl border-b border-white/10">
         <div class="max-w-6xl mx-auto flex justify-between items-center">
             <div class="flex items-center gap-3">
-                <img src="logo-mikaa.png" alt="Logo MIKAA SMP" 
-                     class="w-12 h-12 rounded-xl shadow-lg shadow-glow/30 object-cover border-2 border-glow/30 hover:scale-110 transition-transform">
-                <div>
-                    <h1 class="text-xl font-bold tracking-wide">MIKAA SMP</h1>
-                    <p class="text-xs text-gray-400">Official Rank Store</p>
-                </div>
+                <img src="logo-mikaa.png" alt="Logo MIKAA SMP" class="w-12 h-12 rounded-xl shadow-lg shadow-glow/30 object-cover border-2 border-glow/30 hover:scale-110 transition-transform">
+                <div><h1 class="text-xl font-bold tracking-wide">MIKAA SMP</h1><p class="text-xs text-gray-400">Official Rank Store</p></div>
             </div>
             <nav class="hidden md:flex gap-8">
                 <a href="#home" class="font-medium hover:text-glow transition-colors">Beranda</a>
@@ -75,68 +64,48 @@
             </nav>
             <button onclick="toggleMenu()" class="md:hidden text-2xl"><i class="fa-solid fa-bars"></i></button>
         </div>
-        
-        <nav id="mobileMenu" class="hidden md:hidden flex flex-col gap-3 mt-4 pb-3 animate-fade">
-            <a href="#home" onclick="toggleMenu()" class="font-semibold bg-white/5 hover:bg-glow/20 border-white/10 hover:border-glow/30 px-4 py-3 rounded-xl transition-all flex items-center justify-between">
-                <span><i class="fa-solid fa-house mr-2 text-glow"></i>Beranda</span>
-                <i class="fa-solid fa-chevron-right text-xs"></i>
-            </a>
-            <a href="#ranks" onclick="toggleMenu()" class="font-semibold bg-white/5 hover:bg-glow/20 border-white/10 hover:border-glow/30 px-4 py-3 rounded-xl transition-all flex items-center justify-between">
-                <span><i class="fa-solid fa-crown mr-2 text-vip"></i>Daftar Rank</span>
-                <i class="fa-solid fa-chevron-right text-xs"></i>
-            </a>
-            <a href="#cara-beli" onclick="toggleMenu()" class="font-semibold bg-white/5 hover:bg-glow/20 border-white/10 hover:border-glow/30 px-4 py-3 rounded-xl transition-all flex items-center justify-between">
-                <span><i class="fa-solid fa-cart-shopping mr-2 text-green-400"></i>Cara Beli</span>
-                <i class="fa-solid fa-chevron-right text-xs"></i>
-            </a>
-            <a href="#kontak" onclick="toggleMenu()" class="font-semibold bg-white/5 hover:bg-glow/20 border-white/10 hover:border-glow/30 px-4 py-3 rounded-xl transition-all flex items-center justify-between">
-                <span><i class="fa-brands fa-whatsapp mr-2 text-green-500"></i>Kontak</span>
-                <i class="fa-solid fa-chevron-right text-xs"></i>
-            </a>
+        <nav id="mobileMenu" class="hidden md:hidden flex-col gap-3 mt-4 pb-3 animate-fade">
+            <a href="#home" onclick="toggleMenu()" class="font-semibold bg-white/5 hover:bg-glow/20 px-4 py-3 rounded-xl flex items-center justify-between"><span><i class="fa-solid fa-house mr-2 text-glow"></i>Beranda</span><i class="fa-solid fa-chevron-right text-xs"></i></a>
+            <a href="#ranks" onclick="toggleMenu()" class="font-semibold bg-white/5 hover:bg-glow/20 px-4 py-3 rounded-xl flex items-center justify-between"><span><i class="fa-solid fa-crown mr-2 text-vip"></i>Daftar Rank</span><i class="fa-solid fa-chevron-right text-xs"></i></a>
+            <a href="#cara-beli" onclick="toggleMenu()" class="font-semibold bg-white/5 hover:bg-glow/20 px-4 py-3 rounded-xl flex items-center justify-between"><span><i class="fa-solid fa-cart-shopping mr-2 text-green-400"></i>Cara Beli</span><i class="fa-solid fa-chevron-right text-xs"></i></a>
+            <a href="#kontak" onclick="toggleMenu()" class="font-semibold bg-white/5 hover:bg-glow/20 px-4 py-3 rounded-xl flex items-center justify-between"><span><i class="fa-brands fa-whatsapp mr-2 text-green-500"></i>Kontak</span><i class="fa-solid fa-chevron-right text-xs"></i></a>
         </nav>
     </header>
 
     <section id="home" class="py-16 px-4 text-center">
         <div class="max-w-3xl mx-auto">
             <div class="inline-block mb-4 px-4 py-1 rounded-full bg-glow/20 border-glow/30 text-sm text-glow font-medium">🌐 Server Minecraft Bedrock Edition</div>
-            <h2 class="text-5xl md:text-7xl font-extrabold mb-6">
-                <span class="bg-gradient-to-r from-glow via-accent to-vip bg-clip-text text-transparent glow-text">MIKAA SMP</span>
-            </h2>
+            <h2 class="text-5xl md:text-7xl font-extrabold mb-6"><span class="bg-gradient-to-r from-glow via-accent to-vip bg-clip-text text-transparent glow-text">MIKAA SMP</span></h2>
             <p class="text-xl md:text-2xl text-gray-300 mb-3">Dukung Server & Dapatkan Fitur Eksklusif!</p>
             <p class="text-gray-400 mb-10">Beli rank untuk membuka kemampuan spesial, tampil beda, dan nikmati pengalaman main yang lebih seru!</p>
             
-            <div class="inline-block card-rank rounded-2xl px-8 py-6 shadow-2xl">
-                <p class="text-sm text-gray-400 mb-2">📍 Alamat Server</p>
-                <p class="font-mono text-2xl md:text-3xl text-glow glow-text font-bold">fun.mikaa.my.id</p>
-                <p class="text-gray-500 mt-1">Port: <span class="text-white font-bold">10689</span></p>
-                <button onclick="salinIP()" class="mt-4 bg-gradient-to-r from-glow to-accent px-6 py-2.5 rounded-xl font-bold transition-all hover:scale-105 active:scale-95 cursor-pointer">
-                    <i class="fa-solid fa-copy mr-2"></i> Salin IP Server
-                </button>
+            <!-- SERVER STATUS BARU -->
+            <div class="card-rank rounded-2xl p-6 shadow-2xl max-w-lg mx-auto">
+                <div class="flex justify-between items-center mb-4">
+                    <p class="font-mono text-lg md:text-xl font-bold text-white">fun.mikaa.my.id : 10689</p>
+                    <div class="flex items-center gap-2">
+                        <span id="status-dot" class="w-3 h-3 rounded-full bg-gray-500"></span>
+                        <span id="status-text" class="font-bold text-sm">CHECKING...</span>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-4 bg-black/30 rounded-xl p-4 mb-4">
+                    <div class="text-center"><p class="text-gray-400 text-sm">📶 Ping</p><p id="server-ping" class="text-xl font-bold text-diamond">--ms</p></div>
+                    <div class="text-center"><p class="text-gray-400 text-sm">👥 Player</p><p id="server-players" class="text-xl font-bold text-vip">--/--</p></div>
+                </div>
+                <button onclick="salinIP()" class="w-full bg-gradient-to-r from-glow to-accent px-6 py-3 rounded-xl font-bold transition-all hover:scale-105 active:scale-95 cursor-pointer"><i class="fa-solid fa-copy mr-2"></i> Salin IP Server</button>
             </div>
         </div>
     </section>
 
     <section id="ranks" class="py-16 px-4">
         <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-12">
-                <h3 class="text-4xl font-extrabold mb-3"><i class="fa-solid fa-crown text-vip mr-3 animate-float"></i>Daftar Rank</h3>
-                <p class="text-gray-400">Pilih rank yang sesuai dengan kebutuhanmu</p>
-            </div>
-
+            <div class="text-center mb-12"><h3 class="text-4xl font-extrabold mb-3"><i class="fa-solid fa-crown text-vip mr-3 animate-float"></i>Daftar Rank</h3><p class="text-gray-400">Pilih rank yang sesuai dengan kebutuhanmu</p></div>
             <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
-
-                <!-- 👑 VIP -->
+                <!-- VIP -->
                 <div class="card-vip rounded-2xl p-6 relative hover:scale-[1.02] transition-transform xl:col-span-4">
                     <div class="absolute top-0 right-0 bg-gradient-to-l from-vip to-amber-500 text-black font-bold px-6 py-1 text-sm rounded-tr-2xl rounded-bl-xl">PALING LENGKAP 👑</div>
                     <div class="flex flex-col lg:flex-row gap-8">
-                        <div class="text-center lg:text-left lg:w-1/4">
-                            <div class="text-5xl mb-3 animate-float">👑</div>
-                            <h4 class="text-3xl font-extrabold text-vip glow-text mb-2">VIP</h4>
-                            <p class="text-3xl font-bold text-white mb-4">Rp 65.000</p>
-                            <button onclick="beliRank('VIP', 65000)" class="w-full bg-gradient-to-r from-vip to-amber-500 text-black font-bold py-3 rounded-xl btn-glow transition-all hover:scale-105 active:scale-95 cursor-pointer">
-                                Beli Sekarang <i class="fa-solid fa-arrow-right ml-1"></i>
-                            </button>
-                        </div>
+                        <div class="text-center lg:text-left lg:w-1/4"><div class="text-5xl mb-3 animate-float">👑</div><h4 class="text-3xl font-extrabold text-vip glow-text mb-2">VIP</h4><p class="text-3xl font-bold text-white mb-4">Rp 65.000</p><button onclick="beliRank('VIP', 65000)" class="w-full bg-gradient-to-r from-vip to-amber-500 text-black font-bold py-3 rounded-xl btn-glow">Beli Sekarang <i class="fa-solid fa-arrow-right ml-1"></i></button></div>
                         <div class="lg:w-3/4 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-3 text-sm">
                             <div class="bg-white/5 rounded-lg px-3 py-2"><span class="feature-check"><i class="fa-solid fa-check-circle mr-2"></i></span><strong>/fly</strong> — Bisa Terbang</div>
                             <div class="bg-white/5 rounded-lg px-3 py-2"><span class="feature-check"><i class="fa-solid fa-check-circle mr-2"></i></span><strong>/fly off</strong> — Matikan Terbang</div>
@@ -151,257 +120,97 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- 💎 DIAMOND -->
-                <div class="card-diamond rounded-2xl p-6 hover:scale-105 transition-transform">
-                    <div class="text-center">
-                        <div class="text-4xl mb-3 animate-float" style="animation-delay:.2s">💎</div>
-                        <h4 class="text-2xl font-bold text-diamond glow-text mb-2">DIAMOND</h4>
-                        <p class="text-2xl font-bold text-white mb-5">Rp 45.000</p>
-                    </div>
-                    <div class="space-y-2.5 text-sm mb-5">
-                        <div class="bg-white/5 rounded-lg px-3 py-2"><span class="feature-check"><i class="fa-solid fa-check-circle mr-2"></i></span><strong>/feed</strong> — Isi Lapar</div>
-                        <div class="bg-white/5 rounded-lg px-3 py-2"><span class="feature-check"><i class="fa-solid fa-check-circle mr-2"></i></span><strong>/fly</strong> — Bisa Terbang</div>
-                        <div class="bg-white/5 rounded-lg px-3 py-2"><span class="feature-check"><i class="fa-solid fa-check-circle mr-2"></i></span><strong>/fly off</strong> — Matikan Terbang</div>
-                        <div class="bg-white/5 rounded-lg px-3 py-2"><span class="feature-check"><i class="fa-solid fa-check-circle mr-2"></i></span><strong>/heal</strong> — Pulihkan HP</div>
-                        <div class="bg-white/5 rounded-lg px-3 py-2"><span class="feature-check"><i class="fa-solid fa-check-circle mr-2"></i></span><strong>/nightvision</strong> — Lihat Gelap</div>
-                        <div class="bg-white/5 rounded-lg px-3 py-2"><span class="feature-check"><i class="fa-solid fa-check-circle mr-2"></i></span><strong>/clear</strong> — Hapus Efek</div>
-                    </div>
-                    <button onclick="beliRank('DIAMOND', 45000)" class="w-full bg-gradient-to-r from-diamond to-cyan-400 text-black font-bold py-3 rounded-xl transition-all hover:scale-105 active:scale-95 cursor-pointer">
-                        Beli Sekarang <i class="fa-solid fa-arrow-right ml-1"></i>
-                    </button>
-                </div>
-
-                <!-- 🥇 GOLD -->
-                <div class="card-gold rounded-2xl p-6 hover:scale-105 transition-transform">
-                    <div class="text-center">
-                        <div class="text-4xl mb-3 animate-float" style="animation-delay:.4s">🥇</div>
-                        <h4 class="text-2xl font-bold text-gold glow-text mb-2">GOLD</h4>
-                        <p class="text-2xl font-bold text-white mb-5">Rp 20.000</p>
-                    </div>
-                    <div class="space-y-2.5 text-sm mb-5">
-                        <div class="bg-white/5 rounded-lg px-3 py-2"><span class="feature-check"><i class="fa-solid fa-check-circle mr-2"></i></span><strong>/fly</strong> — Bisa Terbang</div>
-                        <div class="bg-white/5 rounded-lg px-3 py-2"><span class="feature-check"><i class="fa-solid fa-check-circle mr-2"></i></span><strong>/fly off</strong> — Matikan Terbang</div>
-                        <div class="bg-white/5 rounded-lg px-3 py-2"><span class="feature-check"><i class="fa-solid fa-check-circle mr-2"></i></span><strong>/feed</strong> — Isi Lapar</div>
-                        <div class="bg-white/5 rounded-lg px-3 py-2"><span class="feature-check"><i class="fa-solid fa-check-circle mr-2"></i></span><strong>/clear</strong> — Hapus Efek</div>
-                    </div>
-                    <button onclick="beliRank('GOLD', 20000)" class="w-full bg-gradient-to-r from-gold to-yellow-400 text-black font-bold py-3 rounded-xl transition-all hover:scale-105 active:scale-95 cursor-pointer">
-                        Beli Sekarang <i class="fa-solid fa-arrow-right ml-1"></i>
-                    </button>
-                </div>
-
-                <!-- 🪨 STONE -->
-                <div class="card-stone rounded-2xl p-6 hover:scale-105 transition-transform">
-                    <div class="text-center">
-                        <div class="text-4xl mb-3 animate-float" style="animation-delay:.6s">🪨</div>
-                        <h4 class="text-2xl font-bold text-stone glow-text mb-2">STONE</h4>
-                        <p class="text-2xl font-bold text-white mb-5">Rp 5.000</p>
-                    </div>
-                    <div class="space-y-2.5 text-sm mb-5">
-                        <div class="bg-white/5 rounded-lg px-3 py-2"><span class="feature-check"><i class="fa-solid fa-check-circle mr-2"></i></span><strong>/feed</strong> — Isi Lapar</div>
-                        <div class="bg-white/5 rounded-lg px-3 py-2"><span class="feature-check"><i class="fa-solid fa-check-circle mr-2"></i></span><strong>/clear</strong> — Hapus Efek</div>
-                    </div>
-                    <button onclick="beliRank('STONE', 5000)" class="w-full bg-gradient-to-r from-stone to-slate-400 text-black font-bold py-3 rounded-xl transition-all hover:scale-105 active:scale-95 cursor-pointer">
-                        Beli Sekarang <i class="fa-solid fa-arrow-right ml-1"></i>
-                    </button>
-                </div>
-
+                <!-- DIAMOND -->
+                <div class="card-diamond rounded-2xl p-6 hover:scale-105"><div class="text-center"><div class="text-4xl mb-3 animate-float" style="animation-delay:.2s">💎</div><h4 class="text-2xl font-bold text-diamond glow-text mb-2">DIAMOND</h4><p class="text-2xl font-bold text-white mb-5">Rp 45.000</p></div><div class="space-y-2.5 text-sm mb-5"><div class="bg-white/5 rounded-lg px-3 py-2"><span class="feature-check"><i class="fa-solid fa-check-circle mr-2"></i></span><strong>/feed</strong></div><div class="bg-white/5 rounded-lg px-3 py-2"><span class="feature-check"><i class="fa-solid fa-check-circle mr-2"></i></span><strong>/fly</strong></div><div class="bg-white/5 rounded-lg px-3 py-2"><span class="feature-check"><i class="fa-solid fa-check-circle mr-2"></i></span><strong>/heal</strong></div><div class="bg-white/5 rounded-lg px-3 py-2"><span class="feature-check"><i class="fa-solid fa-check-circle mr-2"></i></span><strong>/nightvision</strong></div><div class="bg-white/5 rounded-lg px-3 py-2"><span class="feature-check"><i class="fa-solid fa-check-circle mr-2"></i></span><strong>/clear</strong></div></div><button onclick="beliRank('DIAMOND', 45000)" class="w-full bg-gradient-to-r from-diamond to-cyan-400 text-black font-bold py-3 rounded-xl">Beli Sekarang</button></div>
+                <!-- GOLD -->
+                <div class="card-gold rounded-2xl p-6 hover:scale-105"><div class="text-center"><div class="text-4xl mb-3 animate-float" style="animation-delay:.4s">🥇</div><h4 class="text-2xl font-bold text-gold glow-text mb-2">GOLD</h4><p class="text-2xl font-bold text-white mb-5">Rp 20.000</p></div><div class="space-y-2.5 text-sm mb-5"><div class="bg-white/5 rounded-lg px-3 py-2"><span class="feature-check"><i class="fa-solid fa-check-circle mr-2"></i></span><strong>/fly</strong></div><div class="bg-white/5 rounded-lg px-3 py-2"><span class="feature-check"><i class="fa-solid fa-check-circle mr-2"></i></span><strong>/feed</strong></div><div class="bg-white/5 rounded-lg px-3 py-2"><span class="feature-check"><i class="fa-solid fa-check-circle mr-2"></i></span><strong>/clear</strong></div></div><button onclick="beliRank('GOLD', 20000)" class="w-full bg-gradient-to-r from-gold to-yellow-400 text-black font-bold py-3 rounded-xl">Beli Sekarang</button></div>
+                <!-- STONE -->
+                <div class="card-stone rounded-2xl p-6 hover:scale-105"><div class="text-center"><div class="text-4xl mb-3 animate-float" style="animation-delay:.6s">🪨</div><h4 class="text-2xl font-bold text-stone glow-text mb-2">STONE</h4><p class="text-2xl font-bold text-white mb-5">Rp 5.000</p></div><div class="space-y-2.5 text-sm mb-5"><div class="bg-white/5 rounded-lg px-3 py-2"><span class="feature-check"><i class="fa-solid fa-check-circle mr-2"></i></span><strong>/feed</strong></div><div class="bg-white/5 rounded-lg px-3 py-2"><span class="feature-check"><i class="fa-solid fa-check-circle mr-2"></i></span><strong>/clear</strong></div></div><button onclick="beliRank('STONE', 5000)" class="w-full bg-gradient-to-r from-stone to-slate-400 text-black font-bold py-3 rounded-xl">Beli Sekarang</button></div>
             </div>
         </div>
     </section>
 
     <section id="cara-beli" class="py-16 px-4 bg-black/40">
-        <div class="max-w-5xl mx-auto">
-            <h3 class="text-3xl font-bold text-center mb-10"><i class="fa-solid fa-shopping-cart text-glow mr-2"></i>Cara Pembelian</h3>
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="card-rank p-6 rounded-2xl text-center border border-white/10">
-                    <div class="w-14 h-14 bg-gradient-to-br from-glow to-accent rounded-2xl flex items-center justify-center text-2xl font-bold mx-auto mb-4">1</div>
-                    <h5 class="font-bold text-lg mb-2">Pilih Rank</h5>
-                    <p class="text-gray-400 text-sm">Klik tombol Beli Sekarang pada rank yang kamu inginkan</p>
-                </div>
-                <div class="card-rank p-6 rounded-2xl text-center border-white/10">
-                    <div class="w-14 h-14 bg-gradient-to-br from-green-500 to-emerald-400 rounded-2xl flex items-center justify-center text-2xl font-bold mx-auto mb-4">2</div>
-                    <h5 class="font-bold text-lg mb-2">Isi Nama Akun</h5>
-                    <p class="text-gray-400 text-sm">Masukkan Nama Akun Minecraft kamu dengan benar</p>
-                </div>
-                <div class="card-rank p-6 rounded-2xl text-center border-white/10">
-                    <div class="w-14 h-14 bg-gradient-to-br from-vip to-amber-500 rounded-2xl flex items-center justify-center text-2xl font-bold mx-auto mb-4">3</div>
-                    <h5 class="font-bold text-lg mb-2">Hubungi Admin</h5>
-                    <p class="text-gray-400 text-sm">Kirim bukti bayar & Nama Akun ke WhatsApp Admin</p>
-                </div>
-            </div>
-        </div>
+        <div class="max-w-5xl mx-auto"><h3 class="text-3xl font-bold text-center mb-10"><i class="fa-solid fa-shopping-cart text-glow mr-2"></i>Cara Pembelian</h3><div class="grid md:grid-cols-3 gap-6"><div class="card-rank p-6 rounded-2xl text-center"><div class="w-14 h-14 bg-gradient-to-br from-glow to-accent rounded-2xl flex items-center justify-center text-2xl font-bold mx-auto mb-4">1</div><h5 class="font-bold text-lg mb-2">Pilih Rank</h5></div><div class="card-rank p-6 rounded-2xl text-center"><div class="w-14 h-14 bg-gradient-to-br from-green-500 to-emerald-400 rounded-2xl flex items-center justify-center text-2xl font-bold mx-auto mb-4">2</div><h5 class="font-bold text-lg mb-2">Isi Nama Akun</h5></div><div class="card-rank p-6 rounded-2xl text-center"><div class="w-14 h-14 bg-gradient-to-br from-vip to-amber-500 rounded-2xl flex items-center justify-center text-2xl font-bold mx-auto mb-4">3</div><h5 class="font-bold text-lg mb-2">Hubungi Admin</h5></div></div></div>
     </section>
 
     <section id="kontak" class="py-16 px-4">
-        <div class="max-w-2xl mx-auto">
-            <div class="card-rank rounded-2xl p-8 border-glow/20 shadow-2xl text-center">
-                <h3 class="text-3xl font-bold mb-8"><i class="fa-brands fa-whatsapp text-green-500 mr-2"></i>Hubungi Admin</h3>
-                <div class="bg-green-900/20 p-6 rounded-2xl border-green-500/30 inline-block">
-                    <i class="fa-brands fa-whatsapp text-5xl text-green-500 mb-4"></i>
-                    <p class="font-bold text-xl mb-2">WhatsApp Admin</p>
-                    <p class="text-gray-400 text-sm mb-5">Kirim bukti bayar & Nama Akun Minecraft di sini</p>
-                    <button onclick="kirimWA()" class="w-full bg-green-600 hover:bg-green-500 py-3 rounded-xl font-bold transition-all hover:scale-105 active:scale-95 cursor-pointer">
-                        <i class="fa-brands fa-whatsapp mr-2"></i>Chat WhatsApp Sekarang
-                    </button>
-                </div>
-                <div class="bg-yellow-500/10 border-yellow-500/30 rounded-xl p-4 mt-8 text-yellow-400 text-left">
-                    <i class="fa-solid fa-circle-info mr-2"></i><strong>Catatan:</strong> Rank aktif maksimal 1×24 jam setelah pembayaran terkonfirmasi. Pastikan Nama Akun Minecraft benar!
-                </div>
-            </div>
-        </div>
+        <div class="max-w-2xl mx-auto"><div class="card-rank rounded-2xl p-8 text-center"><h3 class="text-3xl font-bold mb-8"><i class="fa-brands fa-whatsapp text-green-500 mr-2"></i>Hubungi Admin</h3><div class="bg-green-900/20 p-6 rounded-2xl"><i class="fa-brands fa-whatsapp text-5xl text-green-500 mb-4"></i><p class="font-bold text-xl mb-2">WhatsApp Admin</p><button onclick="kirimWA()" class="w-full bg-green-600 hover:bg-green-500 py-3 rounded-xl font-bold"><i class="fa-brands fa-whatsapp mr-2"></i>Chat WhatsApp Sekarang</button></div><div class="bg-yellow-500/10 border border-yellow-500/30 rounded-xl p-4 mt-8 text-yellow-400 text-left"><i class="fa-solid fa-circle-info mr-2"></i><strong>Catatan:</strong> Rank aktif maksimal 1×24 jam</div></div></div>
     </section>
 
-    <footer class="py-8 text-center text-gray-500 text-sm border-t border-white/5 mt-8">
-        <p class="text-lg font-semibold text-gray-400">⛏️ MIKAA SMP © 2026 — Semua Hak Dilindungi ⛏️</p>
-        <p class="mt-2">Server Minecraft Bedrock Edition • fun.mikaa.my.id:10689</p>
-    </footer>
+    <footer class="py-8 text-center text-gray-500 text-sm border-t border-white/5 mt-8"><p class="text-lg font-semibold text-gray-400">⛏️ MIKAA SMP © 2026 — Semua Hak Dilindungi ⛏️</p><p class="mt-2">Server Minecraft Bedrock Edition • fun.mikaa.my.id:10689</p></footer>
 
-    <!-- MUSIC PLAYER FLOATING 🎵 -->
+    <!-- MUSIC PLAYER -->
     <div id="musicPlayer" class="fixed bottom-6 right-6 z-50 flex flex-col items-center">
-        <button id="musicBtn" class="w-16 h-16 rounded-full bg-gradient-to-br from-glow to-accent shadow-lg shadow-glow/50 flex items-center justify-center text-2xl hover:scale-110 transition-all cursor-pointer">
-            <i id="musicIcon" class="fa-solid fa-music"></i>
-        </button>
+        <button id="musicBtn" class="w-16 h-16 rounded-full bg-gradient-to-br from-glow to-accent shadow-lg flex items-center justify-center text-2xl hover:scale-110"><i id="musicIcon" class="fa-solid fa-music"></i></button>
         <p id="musicStatus" class="text-xs text-center mt-2 text-gray-300 hidden">🎧 Chill Music</p>
     </div>
 
-    <!-- Audio Element 🎵 -->
+    <!-- Audio Element -->
     <audio id="bgMusic" preload="auto" loop>
-        <source src="Billie Eilish - BIRDS OF A FEATHER Official Music Video.mp3" type="audio/mpeg">
-        Browser kamu tidak mendukung pemutar audio.
-    
+        <source src="lagu.mp3" type="audio/mpeg">
+    </audio>
 
-    <!-- MODAL KONFIRMASI PEMBELIAN -->
-    <div id="modal" class="fixed inset-0 bg-black/80 hidden items-center justify-center z-50 p-4 animate-fade">
-        <div class="card-rank border-glow/30 rounded-2xl p-6 max-w-md w-full" onclick="event.stopPropagation()">
-            <h4 class="text-2xl font-bold mb-4 text-glow" id="modal-title">Konfirmasi Pembelian</h4>
-            <div id="modal-body"></div>
-            <div class="flex gap-3 mt-6">
-                <button onclick="tutupModal()" class="flex-1 bg-gray-700 hover:bg-gray-600 py-3 rounded-xl font-bold transition-all cursor-pointer">
-                    Batal
-                </button>
-                <button onclick="lanjutKeWA()" class="flex-1 bg-green-600 hover:bg-green-500 py-3 rounded-xl font-bold transition-all cursor-pointer">
-                    ✅ Lanjut ke WhatsApp
-                </button>
-            </div>
-        </div>
-    </div>
+    <!-- MODAL -->
+    <div id="modal" class="fixed inset-0 bg-black/80 hidden items-center justify-center z-50 p-4 animate-fade"><div class="card-rank border-glow/30 rounded-2xl p-6 max-w-md w-full" onclick="event.stopPropagation()"><h4 class="text-2xl font-bold mb-4 text-glow" id="modal-title">Konfirmasi Pembelian</h4><div id="modal-body"></div><div class="flex gap-3 mt-6"><button onclick="tutupModal()" class="flex-1 bg-gray-700 py-3 rounded-xl font-bold">Batal</button><button onclick="lanjutKeWA()" class="flex-1 bg-green-600 py-3 rounded-xl font-bold">✅ Lanjut ke WhatsApp</button></div></div></div>
 
     <script>
-        // === DATA KONFIGURASI ===
         const IP_SERVER = "fun.mikaa.my.id";
         const PORT_SERVER = 10689;
         const NOMOR_WA = "6285198696292";
+        let rankTerpilih = ""; let hargaTerpilih = 0;
 
-        let rankTerpilih = "";
-        let hargaTerpilih = 0;
-
-        // === 🎵 MUSIC PLAYER ===
+        // MUSIC
         const musicBtn = document.getElementById('musicBtn');
         const musicIcon = document.getElementById('musicIcon');
         const musicStatus = document.getElementById('musicStatus');
         const bgMusic = document.getElementById('bgMusic');
-        let isPlaying = false;
-
-        bgMusic.volume = 0.25;
-
+        let isPlaying = false; bgMusic.volume = 0.25;
         musicBtn.addEventListener('click', () => {
-            if (!isPlaying) {
-                bgMusic.play().catch(err => {
-                    console.log("Klik dulu untuk memutar musik:", err);
-                });
-                isPlaying = true;
-                musicIcon.classList.remove('fa-music');
-                musicIcon.classList.add('fa-pause');
-                musicBtn.classList.add('animate-music-bounce');
-                musicStatus.classList.remove('hidden');
-            } else {
-                bgMusic.pause();
-                isPlaying = false;
-                musicIcon.classList.remove('fa-pause');
-                musicIcon.classList.add('fa-music');
-                musicBtn.classList.remove('animate-music-bounce');
-                musicStatus.classList.add('hidden');
-            }
+            if (!isPlaying) { bgMusic.play().catch(()=>{}); isPlaying = true; musicIcon.className='fa-solid fa-pause'; musicBtn.classList.add('animate-music-bounce'); musicStatus.classList.remove('hidden'); }
+            else { bgMusic.pause(); isPlaying = false; musicIcon.className='fa-solid fa-music'; musicBtn.classList.remove('animate-music-bounce'); musicStatus.classList.add('hidden'); }
         });
 
-        // === SALIN IP SERVER ===
-        function salinIP() {
-            navigator.clipboard.writeText(IP_SERVER + ":" + PORT_SERVER);
-            alert("✅ IP Server disalin: " + IP_SERVER + ":" + PORT_SERVER);
-        }
-
-        // === TOGGLE MENU HP ===
-        function toggleMenu(){
-            document.getElementById('mobileMenu').classList.toggle('hidden');
-        }
-
-        // === PILIH RANK & BUKA MODAL ===
+        function salinIP() { navigator.clipboard.writeText(IP_SERVER + ":" + PORT_SERVER); alert("✅ IP Server disalin: " + IP_SERVER + ":" + PORT_SERVER); }
+        function toggleMenu(){ document.getElementById('mobileMenu').classList.toggle('hidden'); }
         function beliRank(namaRank, harga) {
-            rankTerpilih = namaRank;
-            hargaTerpilih = harga;
+            rankTerpilih = namaRank; hargaTerpilih = harga;
             const modal = document.getElementById('modal');
             document.getElementById('modal-title').innerText = "Beli Rank " + namaRank;
-            document.getElementById('modal-body').innerHTML = `
-                <div class="bg-white/5 rounded-xl p-4 mb-4">
-                    <p class="mb-2"><strong>Rank:</strong> ${namaRank}</p>
-                    <p class="text-2xl font-bold text-glow mb-4">Rp ${harga.toLocaleString('id-ID')}</p>
-                    <p class="text-sm text-gray-400 mb-2">Masukkan Nama Akun Minecraft:</p>
-                    <input type="text" id="namaPemain" placeholder="Contoh: Steve123" class="w-full bg-black/50 border-gray-600 rounded-xl px-4 py-3 mb-3 focus:outline-none focus:border-glow">
-                    <p class="text-yellow-400 text-sm">⚠️ Pastikan nama akun benar & sesuai kapital!</p>
-                </div>
-            `;
-            modal.classList.remove('hidden');
-            modal.classList.add('flex');
+            document.getElementById('modal-body').innerHTML = `<div class="bg-white/5 rounded-xl p-4 mb-4"><p class="mb-2"><strong>Rank:</strong> ${namaRank}</p><p class="text-2xl font-bold text-glow mb-4">Rp ${harga.toLocaleString('id-ID')}</p><p class="text-sm text-gray-400 mb-2">Masukkan Nama Akun Minecraft:</p><input type="text" id="namaPemain" placeholder="Contoh: Steve123" class="w-full bg-black/50 border-gray-600 rounded-xl px-4 py-3 mb-3 focus:outline-none focus:border-glow"><p class="text-yellow-400 text-sm">⚠️ Pastikan nama akun benar!</p></div>`;
+            modal.classList.remove('hidden'); modal.classList.add('flex');
         }
-
-        // === TUTUP MODAL ===
-        function tutupModal() {
-            const modal = document.getElementById('modal');
-            modal.classList.add('hidden');
-            modal.classList.remove('flex');
-        }
-
-        // Klik luar modal untuk menutup
-        document.getElementById('modal').addEventListener('click', function(e){
-            if(e.target === this) tutupModal();
-        });
-
-        // === LANJUT KE WHATSAPP ===
+        function tutupModal() { const modal = document.getElementById('modal'); modal.classList.add('hidden'); modal.classList.remove('flex'); }
+        document.getElementById('modal').addEventListener('click', function(e){ if(e.target === this) tutupModal(); });
         function lanjutKeWA() {
             const namaPemain = document.getElementById('namaPemain').value.trim();
-            if (!namaPemain || namaPemain.length < 3) {
-                alert("⚠️ Nama Akun minimal 3 karakter dan tidak boleh kosong!");
-                return;
+            if (!namaPemain || namaPemain.length < 3) { alert("⚠️ Nama Akun minimal 3 karakter!"); return; }
+            const pesan = encodeURIComponent(`Halo Admin MIKAA SMP! 👋\n\n👑 Rank: ${rankTerpilih}\n💰 Harga: Rp ${hargaTerpilih.toLocaleString('id-ID')}\n👤 Nama Akun: ${namaPemain}\n🌐 Server: ${IP_SERVER}:${PORT_SERVER}\n\n✅ Sudah siap bayar. Terima kasih! ⛏️`);
+            window.open("https://wa.me/" + NOMOR_WA + "?text=" + pesan, "_blank"); tutupModal();
+        }
+        function kirimWA() { window.open("https://wa.me/" + NOMOR_WA, "_blank"); }
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => { anchor.addEventListener('click', function(e) { e.preventDefault(); const target = document.querySelector(this.getAttribute('href')); if(target) { target.scrollIntoView({ behavior: 'smooth' }); document.getElementById('mobileMenu').classList.add('hidden'); } }); });
+
+        // SERVER STATUS API
+        async function updateServerStatus() {
+          try {
+            const res = await fetch(`https://api.mcsrvstat.us/bedrock/2/${IP_SERVER}:${PORT_SERVER}`);
+            const data = await res.json();
+            const dot = document.getElementById('status-dot'); const text = document.getElementById('status-text');
+            if (data.online) {
+              dot.className = 'w-3 h-3 rounded-full bg-green-500 shadow-lg shadow-green-500/50';
+              text.innerText = 'ONLINE'; text.className = 'font-bold text-sm text-green-400';
+              document.getElementById('server-ping').innerText = data.ping + 'ms';
+              document.getElementById('server-players').innerText = `${data.players.online}/${data.players.max}`;
+            } else {
+              dot.className = 'w-3 h-3 rounded-full bg-red-500';
+              text.innerText = 'OFFLINE'; text.className = 'font-bold text-sm text-red-400';
+              document.getElementById('server-ping').innerText = '--ms';
+              document.getElementById('server-players').innerText = '0/0';
             }
-            const pesan = encodeURIComponent(
-                "Halo Admin MIKAA SMP! 👋\n\n" +
-                "👑 Rank: " + rankTerpilih + "\n" +
-                "💰 Harga: Rp " + hargaTerpilih.toLocaleString('id-ID') + "\n" +
-                "👤 Nama Akun: " + namaPemain + "\n" +
-                "🌐 Server: " + IP_SERVER + ":" + PORT_SERVER + "\n\n" +
-                "✅ Sudah siap bayar. Terima kasih! ⛏️"
-            );
-            window.open("https://wa.me/" + NOMOR_WA + "?text=" + pesan, "_blank");
-            tutupModal();
+          } catch (e) { document.getElementById('status-text').innerText = 'ERROR'; }
         }
-
-        // === KIRIM PESAN LANGSUNG KE WA ===
-        function kirimWA() {
-            window.open("https://wa.me/" + NOMOR_WA, "_blank");
-        }
-
-        // === SMOOTH SCROLL NAVIGASI ===
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if(target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    document.getElementById('mobileMenu').classList.add('hidden');
-                }
-            });
-        });
+        updateServerStatus(); setInterval(updateServerStatus, 30000);
     </script>
 </body>
 </html>
