@@ -257,6 +257,20 @@
         <p class="mt-2">Server Minecraft Bedrock Edition • fun.mikaa.my.id:10689</p>
     </footer>
 
+    <!-- 🎵 PEMUTAR MUSIK FLOATING -->
+    <div id="musicPlayer" class="fixed bottom-6 right-6 z-50 flex flex-col items-center">
+        <button id="musicBtn" class="w-16 h-16 rounded-full bg-gradient-to-br from-glow to-accent shadow-lg shadow-glow/50 flex items-center justify-center text-2xl hover:scale-110 transition-all cursor-pointer">
+            <i id="musicIcon" class="fa-solid fa-music"></i>
+        </button>
+        <p id="musicStatus" class="text-xs text-center mt-2 text-gray-300 hidden">🎧 Musik Latar</p>
+    </div>
+
+    <!-- 🎵 AUDIO ELEMENT -->
+    <audio id="bgMusic" preload="auto" loop>
+        <source src="lagu.mp3" type="audio/mpeg">
+        Browser kamu tidak mendukung pemutar audio.
+    
+
     <!-- MODAL KONFIRMASI PEMBELIAN -->
     <div id="modal" class="fixed inset-0 bg-black/80 hidden items-center justify-center z-50 p-4 animate-fade">
         <div class="card-rank border-glow/30 rounded-2xl p-6 max-w-md w-full" onclick="event.stopPropagation()">
@@ -281,6 +295,36 @@
 
         let rankTerpilih = "";
         let hargaTerpilih = 0;
+
+        // === 🎵 MUSIC PLAYER ===
+        const musicBtn = document.getElementById('musicBtn');
+        const musicIcon = document.getElementById('musicIcon');
+        const musicStatus = document.getElementById('musicStatus');
+        const bgMusic = document.getElementById('bgMusic');
+        let isPlaying = false;
+
+        bgMusic.volume = 0.25; // Volume 25% agar tidak terlalu keras
+
+        musicBtn.addEventListener('click', () => {
+            if (!isPlaying) {
+                bgMusic.play().catch(err => {
+                    console.log("Klik dulu untuk memutar musik:", err);
+                    alert("🔇 Klik lagi untuk memutar musik!");
+                });
+                isPlaying = true;
+                musicIcon.classList.remove('fa-music');
+                musicIcon.classList.add('fa-pause');
+                musicBtn.classList.add('animate-music-bounce');
+                musicStatus.classList.remove('hidden');
+            } else {
+                bgMusic.pause();
+                isPlaying = false;
+                musicIcon.classList.remove('fa-pause');
+                musicIcon.classList.add('fa-music');
+                musicBtn.classList.remove('animate-music-bounce');
+                musicStatus.classList.add('hidden');
+            }
+        });
 
         // === SALIN IP SERVER ===
         function salinIP() {
